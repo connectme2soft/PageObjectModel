@@ -20,12 +20,8 @@ public class FreeCrmTest {
 
 	@BeforeMethod
 	public void setUp() throws Exception {
-//		System.setProperty("webdriver.chrome.driver", "/home/osboxes/chromedriver/chromedriver");
-//		driver = new ChromeDriver();
- System.setProperty("webdriver.chrome.driver", "/home/osboxes/chromedriver/chromedriver");
-                        capabilities = DesiredCapabilities.chrome();
-                        String[] options = new String[] { "--start-maximized", "--headless" };
-                        driver = new RemoteWebDriver(service.getUrl(), capabilities);
+		System.setProperty("webdriver.chrome.driver", "/home/osboxes/chromedriver/chromedriver");
+		driver = new ChromeDriver();
 		js = (JavascriptExecutor) driver;
 		driver.get("https://www.freecrm.com/index.html");
 	}

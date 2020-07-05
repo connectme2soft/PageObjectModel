@@ -42,10 +42,11 @@ public class TestBase {
 		
 		if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "/home/osboxes/chromedriver/chromedriver");	
-			//driver = new ChromeDriver(); 
-			capabilities = DesiredCapabilities.chrome();
-			String[] options = new String[] { "--start-maximized", "--headless" };
-			driver = new RemoteWebDriver(service.getUrl(), capabilities);
+			driver = new ChromeDriver(); 
+		}
+		else if(browserName.equals("FF")){
+			System.setProperty("webdriver.gecko.driver", "/Users/naveenkhunteta/Documents/SeleniumServer/geckodriver");	
+			driver = new FirefoxDriver(); 
 		}
 		
 		
