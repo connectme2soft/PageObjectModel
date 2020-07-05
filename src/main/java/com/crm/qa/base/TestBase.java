@@ -39,12 +39,14 @@ public class TestBase {
 	
 	public static void initialization(){
 		String browserName = prop.getProperty("browser");
-		
+	DesiredCapabilities capabilities = null;	
 		if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "/home/osboxes/chromedriver/chromedriver");	
 			//driver = new ChromeDriver(); 
 			capabilities = DesiredCapabilities.chrome();
 			String[] options = new String[] { "--start-maximized", "--headless" };
+capabilities.setCapability("chrome.switches", options);
+
 			driver = new RemoteWebDriver(service.getUrl(), capabilities);
 		}
 		
