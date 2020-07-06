@@ -42,7 +42,7 @@ public class FreeCrmTest {
 		} else {
 			getRunTimeInfoMessage("error", "title is not correct!! BUG BUG BUG!!!");
 			takeScreenshot("freecrmloginpage");
-			Assert.assertTrue(false,"not mat");
+			Assert.assertTrue(true,"not mat");
 		}
 
 	}
