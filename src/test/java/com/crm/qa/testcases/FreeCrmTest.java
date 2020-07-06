@@ -23,7 +23,7 @@ public class FreeCrmTest {
 	public void setUp() throws Exception {
 		System.setProperty("webdriver.chrome.driver", "/home/osboxes/chromedriver/chromedriver");
 		ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--headless");
+                #chromeOptions.addArguments("--headless");
                 chromeOptions.addArguments("--no-sandbox");
 		driver = new ChromeDriver(chromeOptions);
 		js = (JavascriptExecutor) driver;
